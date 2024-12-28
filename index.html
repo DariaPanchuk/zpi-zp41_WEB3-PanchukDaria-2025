@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #title {
+            color: gainsboro;
+        }
+
+        #textInput {
+            padding: 15px 16px;
+            background-color: gainsboro;
+            outline: none;
+            border: none;
+        }
+
+        #textInput:hover,
+        #textInput:focus {
+            border: 2px solid black;
+        }
+
+        #autocomplete-list {
+            max-height: 150px;
+            overflow-y: auto;
+            position: absolute;
+            background-color: white;
+            z-index: 1000;
+            width: 335px;
+        }
+    
+        #autocomplete-list div {
+            padding: 8px;
+            cursor: pointer;
+        }
+    
+        #autocomplete-list div:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="title">Текстове поле з підказками</h1>
+    <input type="text" id="textInput" placeholder="Введіть текст..." style="width: 300px;">
+    <div id="autocomplete-list"></div>
+    
+    <script src="./task.js"></script>
+</body>
+</html>
